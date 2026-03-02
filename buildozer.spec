@@ -1,6 +1,5 @@
-name: Build APK
-on: [push, pull_request]
 
+on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,11 +10,9 @@ jobs:
         with:
           buildozer_version: master
           command: android debug
-      - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
           name: carpool-app
-
           path: bin/*.apk
 android.accept_sdk_license = True
 
