@@ -5,11 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Build with Buildozer
-        uses: ArtemSBulat/buildozer-action@v1
+        uses: ArtemSBulat/buildozer-action@v1.6.1
         with:
           buildozer_version: master
           command: android debug
