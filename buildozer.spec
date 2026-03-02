@@ -15,4 +15,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: carpool-app
+
           path: bin/*.apk
+       android.accept_sdk_license = True
