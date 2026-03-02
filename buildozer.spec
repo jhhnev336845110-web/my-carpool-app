@@ -1,18 +1,1 @@
-
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build with Buildozer
-        uses: ArtemSBulat/buildozer-action@v1
-        with:
-          buildozer_version: master
-          command: android debug
-        uses: actions/upload-artifact@v2
-        with:
-          name: carpool-app
-          path: bin/*.apk
 android.accept_sdk_license = True
-
