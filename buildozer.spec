@@ -17,4 +17,5 @@ jobs:
           name: carpool-app
 
           path: bin/*.apk
- android.accept_sdk_license = True
+android.accept_sdk_license = True
+
