@@ -13,8 +13,10 @@ jobs:
           buildozer_version: master
           command: android debug
 
-      - name: Upload APK
+    HEBREW_FONT = "hebrew.ttf"
+- name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: carpool-app
           path: bin/*.apk
+
