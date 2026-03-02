@@ -13,7 +13,7 @@ import arabic_reshaper
 from bidi.algorithm import get_display
 
 # --- הגדרות מערכת ---
-HEBREW_FONT = "arial.ttf" 
+HEBREW_FONT = "עברית.ttf" 
 RIDES_FILE = "rides_db.json"
 USERS_FILE = "users_db.json"
 current_user = None 
@@ -193,4 +193,5 @@ class CarpoolApp(App):
         return sm
 
 if __name__ == "__main__":
+
     CarpoolApp().run()
