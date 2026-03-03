@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -21,6 +21,8 @@ jobs:
 
       - name: Build with Buildozer
         run: |
+          # פקודה שמנקה הכל לפני שמתחילים כדי למנוע טעויות מהעבר
+          buildozer android clean
           yes | buildozer android debug
         
       - name: Upload APK
