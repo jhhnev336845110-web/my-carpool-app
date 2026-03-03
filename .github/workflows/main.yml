@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
 
@@ -21,7 +21,8 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # בנייה ישירה ללא פקודות ניקוי שעלולות להיכשל
+          # מחיקת תיקיית העבודה הישנה כדי להתחיל דף חלק לגמרי
+          rm -rf .buildozer
           yes | buildozer android debug
         
       - name: Upload APK
