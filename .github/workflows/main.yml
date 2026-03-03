@@ -21,7 +21,7 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # כאן אנחנו מריצים רק את הבנייה עצמה
+          # בנייה ישירה ללא פקודות ניקוי שעלולות להיכשל
           yes | buildozer android debug
         
       - name: Upload APK
