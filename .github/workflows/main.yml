@@ -21,7 +21,7 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # מחיקת תיקיית העבודה הישנה כדי להתחיל דף חלק לגמרי
+          # מחיקת קבצים ישנים ופגומים מהלילה
           rm -rf .buildozer
           yes | buildozer android debug
         
