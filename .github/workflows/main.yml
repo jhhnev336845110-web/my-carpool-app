@@ -21,10 +21,10 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # מחיקת קבצים ישנים ופגומים מהלילה
-          rm -rf .buildozer
+          (while true; do echo "Building in progress..."; sleep 60; done) &
           yes | buildozer android debug
-        
+          kill $!
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         if: always()
